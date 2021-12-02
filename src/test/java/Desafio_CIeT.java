@@ -1,4 +1,3 @@
-package br.unibh.tp;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ public class Desafio_CIeT {
         driver.findElement(By.id(fieldName)).sendKeys(value);
         driver.findElement(By.xpath("//*[@id='page-top']/div[1]/form/div/button")).click();
         assertEquals(driver.findElement(By.xpath("//*[@id='page-top']/div[2]/div")).getText(), assertValue);
-        driver.close();
+        //driver.close();
     }
 
     @BeforeEach
