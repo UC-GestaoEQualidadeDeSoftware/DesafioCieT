@@ -5,14 +5,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.openqa.selenium.WebElement;
 
 public class Desafio_CIeT {
 
-    private final String WEBDRIVER_PATH = "C:\\Users\\jessica.kenia\\Desktop\\Selenium\\chromedriver.exe";
+    private final String WEBDRIVER_PATH = "C:\\Users\\apfer\\Downloads\\chromedriver.exe";
     private final String WEBSITE_URL = "https://opentdb.com/browse.php";
 
     void ValidateField(String fieldName, String value, String assertValue) {
@@ -21,7 +23,7 @@ public class Desafio_CIeT {
         driver.findElement(By.id(fieldName)).sendKeys(value);
         driver.findElement(By.xpath("//*[@id='page-top']/div[1]/form/div/button")).click();
         assertEquals(driver.findElement(By.xpath("//*[@id='page-top']/div[2]/div")).getText(), assertValue);
-        //driver.close();
+        driver.close();
     }
 
     @BeforeEach
@@ -34,4 +36,19 @@ public class Desafio_CIeT {
     void PrimeiraParte() {
         ValidateField("query", "Science: Computers", "No questions found.");
     }
+
+
+    @Test
+    void SegundaParte() {
+        WebDriver driver = new ChromeDriver();
+        driver.get(WEBSITE_URL);
+        driver.findElement(By.id("query")).sendKeys("Science: Computers");
+        driver.findElement(By.xpath("//*[@id=\"type\"]/option[3]")).click();
+        driver.findElement(By.xpath("//*[@id='page-top']/div[1]/form/div/button")).click();
+        assertEquals(driver.findElements(By.xpath("//*[@id=\"page-top\"]/div[2]/table/tbody/tr")).size(), 25);
+        assertEquals (driver.findElement(By.xpath("//*[@id='page-top']/div[2]/center/ul")).isEnabled(), true);
+        
+       driver.close();
+    }
+  
 }
