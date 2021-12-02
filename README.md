@@ -29,3 +29,16 @@ Arquivos com o codigo Gherkin se encontram no repositorio com os seguintes nomes
 
 ## Desafio extra : Teste de Desenvolvimento - Frontend
 Repositorio do desafio extra...
+
+## Desenvolvedores 
+| <img src="https://avatars.githubusercontent.com/u/89614560?v=4" width=115 > | <img src="https://avatars.githubusercontent.com/u/89555322?v=4" width=115 >
+|---|---|
+| [Jéssica Amaral](https://github.com/JessicaKAmaral) | [Aline Ferlini](https://github.com/alineferlini) 
+
+| <img src="https://avatars.githubusercontent.com/u/74051662?v=4" width=115 > | <img src="https://avatars.githubusercontent.com/u/62044186?v=4" width=115 > | 
+|---|---| 
+| [Nathan_GP](https://github.com/Nathan-GHub) | [Lucas Valadares](https://github.com/ldevLucasl)
+
+| <img src="https://avatars.githubusercontent.com/u/324262?v=4" width=115 > |  |
+|---|---| 
+| [Rodrigo Reis](https://github.com/rodrigoreis) |  |
