@@ -17,15 +17,7 @@ public class Desafio_CIeT {
     private final String WEBDRIVER_PATH = "C:\\Users\\apfer\\Downloads\\chromedriver.exe";
     private final String WEBSITE_URL = "https://opentdb.com/browse.php";
 
-    void ValidateField(String fieldName, String value, String assertValue) {
-        WebDriver driver = new ChromeDriver();
-        driver.get(WEBSITE_URL);
-        driver.findElement(By.id(fieldName)).sendKeys(value);
-        driver.findElement(By.xpath("//*[@id='page-top']/div[1]/form/div/button")).click();
-        assertEquals(driver.findElement(By.xpath("//*[@id='page-top']/div[2]/div")).getText(), assertValue);
-        driver.close();
-    }
-
+    
     @BeforeEach
     void Setup() {
         File file = new File(WEBDRIVER_PATH);
@@ -34,7 +26,13 @@ public class Desafio_CIeT {
 
     @Test
     void PrimeiraParte() {
-        ValidateField("query", "Science: Computers", "No questions found.");
+        WebDriver driver = new ChromeDriver();
+        driver.get(WEBSITE_URL);
+        driver.findElement(By.id("query")).sendKeys("Science: Computers");
+        driver.findElement(By.xpath("//*[@id='page-top']/div[1]/form/div/button")).click();
+        assertEquals(driver.findElement(By.xpath("//*[@id='page-top']/div[2]/div")).getText(), "No questions found.");
+                
+        driver.close();
     }
 
 
@@ -51,4 +49,17 @@ public class Desafio_CIeT {
        driver.close();
     }
   
+    
+    @Test
+    void TerceiraParte() {
+        WebDriver driver = new ChromeDriver();
+        driver.get(WEBSITE_URL);
+        driver.findElement(By.id("query")).sendKeys("Print744");
+        driver.findElement(By.xpath("//*[@id=\"type\"]/option[2]")).click();
+        driver.findElement(By.xpath("//*[@id='page-top']/div[1]/form/div/button")).click();
+        driver.findElement(By.xpath("//a[@href='user_profile.php?user=2668']")).click();
+        assertEquals(driver.findElement(By.xpath("//*[@id=\"page-top\"]/div[2]/table[1]/tbody/tr/td[3]")).getText(),"Standard User");
+      
+        driver.close();
+    }
 }
