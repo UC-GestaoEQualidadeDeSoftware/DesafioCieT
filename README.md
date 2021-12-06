@@ -45,7 +45,7 @@ Arquivos com o codigo Gherkin se encontram no repositorio com os seguintes nomes
 </ul>
 
 ## Desafio extra : Teste de Desenvolvimento - Frontend
-Repositorio do desafio extra...
+Repositorio esta na branch master, para visualizar o mesmo devemos clonar o repositorio e trocar para a branch master
 
 ## Desenvolvedores 
 | <img src="https://avatars.githubusercontent.com/u/89614560?v=4" width=115 > | <img src="https://avatars.githubusercontent.com/u/89555322?v=4" width=115 >
