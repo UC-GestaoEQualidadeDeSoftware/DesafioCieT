@@ -47,6 +47,56 @@ Arquivos com o codigo Gherkin se encontram no repositorio com os seguintes nomes
 ## Desafio extra : Teste de Desenvolvimento - Frontend
 Repositorio esta na branch master, para visualizar o mesmo devemos clonar o repositorio e trocar para a branch master
 
+Desafio feito com React Native, visto que um app todo list é mais bem vindo em mundo mobile.
+
+### Setup 
+
+Clonar o repositorio e dar um checkout para a branch master 
+```shell
+$ git clone https://github.com/UC-GestaoEQualidadeDeSoftware/DesafioCieT.git 
+```
+```shell
+$ git checkout master 
+```
+
+Apos isso deveremos rodar o comando para instalar as dependencias 
+```shell
+$ yarn 
+```
+ou 
+```shell
+$ npm install
+```
+
+E para rodarmos a aplicação precisaremos rodar o comando 
+```shell
+$ yarn start
+```
+ou
+```shell
+$ npm start
+```
+
+Logo apos esse comando deveremos ter o aplicativo expo-go instalado no seu dispositivo movel independente do SO
+
+
+### Extra 
+
+Para rodar essa aplicação deveremos ter instalado o Expo, o NodeJS e o NPM ou o YARN.
+
+### Imagens 
+<img src="https://i.imgur.com/wmoPHP5.jpg" height="500px" >
+
+<img src="https://i.imgur.com/i0vfmob.jpg" height="500px" >
+
+<img src="https://i.imgur.com/NXmOIRv.jpg" height="500px" >
+
+<img src="https://i.imgur.com/w2aRM25.jpg" height="500px" >
+
+<img src="https://i.imgur.com/9hWlEXm.jpg" height="500px" >
+
+<img src="https://i.imgur.com/BJc62YB.jpg" height="500px" >
+
 ## Desenvolvedores 
 | <img src="https://avatars.githubusercontent.com/u/89614560?v=4" width=115 > | <img src="https://avatars.githubusercontent.com/u/89555322?v=4" width=115 >
 |---|---|
